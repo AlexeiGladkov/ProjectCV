@@ -1,0 +1,109 @@
+%flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    @extend %flex;
+    background: #e5e5e5;
+}
+.container {
+    display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 30px; 
+}
+.card {
+    // width: 370px;
+    height: 502px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.09);
+    border-radius: 5px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+.card-tile {
+    position: absolute;
+    top: 18px;
+    left: 0px;
+    background: #ce3535;
+    color: white;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 9px 20px 7px 20px;
+}
+.new-tile {
+    background: #222222;
+    text-transform: uppercase;
+}
+.card-image {
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.card-titel {
+    color: #222222;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.6;
+    text-decoration: none;
+    margin-top: 40px;
+    width: 100%;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.card-price {
+    width: 100%;
+    text-align: right;
+}
+.card-price-sale {
+    text-decoration: line-through;
+    font-weight: 500;
+    font-size: 20px;
+    color: #5a5a5a;
+    margin: 20px 0 10px;
+    min-height: 24px; 
+}
+.card-price-original {
+    color: #ce3535;
+    font-weight: 900;
+    font-size: 24px;
+}
+.card-btn {
+    background: #ce3535;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px;
+    width: 100%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @extend %flex;
+    margin-top: 30px;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.card-btn-img {
+    margin-right: 10px;
+}
